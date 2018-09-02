@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import { AdminApplyDelegate } from '../../components/highLevelCompo_Delegate';
+
 class CosmeticCompo extends Component {
 	render() {
 		return (
 			<div>
+                <AdminApplyDelegate isAdmin={true} info="when you see it, you are a real administrator." />
+                <hr />
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-sm-4">

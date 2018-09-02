@@ -5,16 +5,19 @@ import InDecisionHeader from '../../components/indecision/Header';
 import RandomPickupDecision from '../../components/indecision/PickupAction';
 import ShowOptions from '../../components/indecision/ShowOptions';
 import AddOpt from '../../components/indecision/AddOpt';
+import OptModal from '../../components/indecision/OptsModal';
 
 class InDecisionCompo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            options: []
+            options: [],
+            selectedOpt: undefined
         };
     }
 
     componentDidMount() {
+        // reload options.
         try {
             const json = sessionStorage.getItem('options');
             const options = JSON.parse(json);
@@ -27,6 +30,7 @@ class InDecisionCompo extends Component {
         }
     }
     componentDidUpdate(prevProps, prevState) {
+        // update options.
         if (prevState.options.length !== this.state.options.length) {
             const json = JSON.stringify(this.state.options);
             sessionStorage.setItem('options', json);
@@ -38,8 +42,14 @@ class InDecisionCompo extends Component {
 
     randomPickupDecision() {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
-        const targetOpt = this.state.options[randomNum];
-        alert(targetOpt);
+        const selectedOpt = this.state.options[randomNum];
+        this.setState(() => ({ selectedOpt }));
+    }
+
+    handleClearSelectedOption() {
+        this.setState(() => ({
+            selectedOpt: undefined
+        }));
     }
     
     rmCurentOption(optionToRemove) {
@@ -83,6 +93,8 @@ class InDecisionCompo extends Component {
                         </CardBody>
                         <CardFooter>InDecision Footer</CardFooter>
                     </Card>
+                    <OptModal selectedOpt={this.state.selectedOpt}
+                        handleClearSelectedOpt={() => { this.handleClearSelectedOption() }} />
                 </div>
             </div>
         )

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { FETCH_INEBRIANT, FETCH_HEALTH, FETCH_COSMETIC, FETCH_CRAFTS,
+import { FETCH_INEBRIANT, FETCH_HEALTH, FETCH_COSMETIC,
     FETCH_MISS_CHILDREN, FETCH_PROPVAL_OBJ, FETCH_BOOKS } from '../types';
 import { handleError, handleNoData } from '../helpers/error-handler';
 

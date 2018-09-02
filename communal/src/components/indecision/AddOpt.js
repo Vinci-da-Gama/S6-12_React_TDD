@@ -13,15 +13,6 @@ export default class AddOptions extends Component {
         e.preventDefault();
         const newThing = e.target.elements.thingName.value.trim();
         const error = this.props.handleAddOption(newThing);
-        /* if (newThing) {
-            this.setState((preState) => {
-                return {
-                    options: [...preState.options, newThing]
-                };
-            });
-            e.target.elements.thingName.value = '';
-        }
-        this.render(); */
         this.setState(() => ({ error }));
         if (!error) {
             e.target.elements.thingName.value = '';

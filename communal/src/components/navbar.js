@@ -35,9 +35,33 @@ class AppNavBarCompo extends Component {
 					<Nav className="mr-auto" navbar>
 						<NavItem>
 							<NavLink to="/" activeClassName="active" tag={RRNavLink} exact>
-								Home
+								Expense_Dashboard
 							</NavLink>
 						</NavItem>
+						<UncontrolledDropdown nav inNavbar>
+							<DropdownToggle nav caret>
+								Expense_Modification
+							</DropdownToggle>
+							<DropdownMenu right>
+								<DropdownItem>
+									<NavLink to="/create" activeClassName="active" tag={RRNavLink}>
+										Create
+									</NavLink>
+								</DropdownItem>
+								<DropdownItem divider />
+								<DropdownItem>
+									<NavLink to="/edit" activeClassName="active" tag={RRNavLink}>
+										Edit
+									</NavLink>
+								</DropdownItem>
+								<DropdownItem divider />
+								<DropdownItem>
+									<NavLink to="/help" activeClassName="active" tag={RRNavLink}>
+										Help
+									</NavLink>
+								</DropdownItem>
+							</DropdownMenu>
+						</UncontrolledDropdown>
 						<NavItem>
 							<NavLink to="/inebriant" activeClassName="active" tag={RRNavLink}>
 								Inebriant
@@ -48,39 +72,9 @@ class AppNavBarCompo extends Component {
 								Health
 							</NavLink>
 						</NavItem>
-                        {/* This is sample as dropdown link, in Route, those are simple route, not nested route */}
-						{/* <UncontrolledDropdown nav inNavbar>
-							<DropdownToggle nav caret>
-								Food
-							</DropdownToggle>
-							<DropdownMenu right>
-								<DropdownItem>
-									<NavLink to="/pastry" activeClassName="active" tag={RRNavLink}>
-										Pastry
-									</NavLink>
-								</DropdownItem>
-								<DropdownItem divider />
-								<DropdownItem>
-									<NavLink to="/dairy" activeClassName="active" tag={RRNavLink}>
-										Dairy Products
-									</NavLink>
-								</DropdownItem>
-								<DropdownItem divider />
-								<DropdownItem>
-									<NavLink to="/fresh" activeClassName="active" tag={RRNavLink}>
-										Fresh
-									</NavLink>
-								</DropdownItem>
-							</DropdownMenu>
-						</UncontrolledDropdown> */}
 						<NavItem>
-							<NavLink to="/cosmetic" activeClassName="active" tag={RRNavLink}>
-								Cosmetic
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink to="/crafts" activeClassName="active" tag={RRNavLink}>
-								Crafts
+							<NavLink to="/cosmetic_hlDegate" activeClassName="active" tag={RRNavLink}>
+								Cosmetic_N_HighLevelCompoDelegate
 							</NavLink>
 						</NavItem>
 						<NavItem>
