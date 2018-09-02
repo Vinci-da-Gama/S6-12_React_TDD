@@ -1,0 +1,57 @@
+@mixin fontSmooth() {
+	@each $vender in $venderList {
+		#{$vender}font-smoothing: antialiased;
+	}
+	text-rendering: optimizelegibility;
+}
+
+@mixin extendFlex($zeroPixel) {
+	width: 100%;
+	height: auto;
+	padding: $zeroPixel;
+	margin: $zeroPixel auto;
+	outline: none;
+}
+
+
+@mixin excerpt($font-size: 16px, $excerpt-bg: transparent, $line-height: 1.5, $lines-to-show: 3) {
+	background: $excerpt-bg;
+	display: block;
+	display: -webkit-box;
+	max-height: $font-size*$line-height*$lines-to-show;
+	font-size: $font-size;
+	line-height: $line-height;
+	-webkit-line-clamp: $lines-to-show;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@-moz-document url-prefix() {
+		overflow: hidden;
+		position: relative;
+		&:before {
+			background-color: $excerpt-bg;
+			bottom: 0;
+			position: absolute;
+			right: 0px;
+			float: right;
+			content: '\2026';
+			margin-left: -3rem;
+			width: 3rem;
+		}
+		&:after {content: '';
+			background-color: $excerpt-bg;
+			position: absolute;
+			height: 50px;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+}
+
+@mixin scaleLetter($x: 1, $y: 1) {
+	-webkit-transform:scale($x, $y);
+	-moz-transform:scale($x, $y);
+	-ms-transform:scale($x, $y);
+	-o-transform:scale($x, $y);
+	transform:scale($x, $y);
+}
