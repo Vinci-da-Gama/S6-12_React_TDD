@@ -1,4 +1,5 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import 'react-dates/lib/css/_datepicker.css';
 @import "./_general/mixins";
 @import "./_general/variables";
 @import "./compos/loader";
@@ -118,6 +119,11 @@ input.checkbox3imgstyle:not(old):checked + label {
         background-color: gray;
         color: #fff;
     }
+}
+
+.select-rightcorner {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
 }
 
 

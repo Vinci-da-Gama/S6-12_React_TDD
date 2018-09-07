@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class HelpExpense extends Component {
-    render () {
-        return (
-            <div>
-                help exp....
-            </div>
-        );
-    }
-};
+const HelpExpenseCompo = () => (
+    <div>
+        This is from my help component
+    </div>
+);
 
-export default HelpExpense;
+export default HelpExpenseCompo;
+

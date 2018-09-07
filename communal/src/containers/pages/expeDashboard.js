@@ -1,6 +1,8 @@
 import React from 'react';
 const { Component } = React;
 
+import ExpenseSummary from '../../components/livingExpense/Expense_Summary';
+import ExpenseListFilter from '../../components/livingExpense/Expense_ListFilter';
 import ExpenseList from '../../components/livingExpense/expenseList';
 
 class LivingExpenseDashboard extends Component {
@@ -23,10 +25,13 @@ class LivingExpenseDashboard extends Component {
         }
     }
     
-    
 	render() {
 		return (
 			<div className="container-fluid">
+                <ExpenseSummary />
+                <ExpenseListFilter />
+                <ExpenseList />
+                <div className="clearfix"></div>
                 <div className="row mx-3">
                     {/* stage-2, bootstrap to scss, index provider, favicon, nested route, scroll to top change id, clear up */}
                     <p className="col-12 col-sm-4 col-md-3">
@@ -34,10 +39,6 @@ class LivingExpenseDashboard extends Component {
                     </p>
                     { (this.state.condition.age && this.state.condition.age >= 18) && <p className="col-12 col-sm-4 col-md-3">Age: { this.state.condition.age }</p> }
                     { this.showJobTitle(this.state.condition.jobTitle) }
-                </div>
-                <div className="clearfix"></div>
-                <div>
-                    <ExpenseList />
                 </div>
 			</div>
 		);

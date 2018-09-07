@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomeDashboardCompo from '../containers/pages/expeDashboard';
-import expeCreate from '../components/livingExpense/create';
+import AddExpense from '../components/livingExpense/AddExpense';
 import expeEdit from '../components/livingExpense/edit';
 import expeHelp from '../components/livingExpense/help';
 import InebriantCompo from '../containers/pages/inebriant';
@@ -15,7 +15,7 @@ import NoFoundCompo from '../containers/pages/NoFound';
 const RootRoute = () => (
 	<Switch>
 		<Route path='/' component={HomeDashboardCompo} exact={true} />
-        <Route path="/create" component={expeCreate} />
+        <Route path="/create" component={AddExpense} />
         <Route path="/edit/:id" component={expeEdit} />
         <Route path="/help" component={expeHelp} />
 		<Route path='/inebriant' component={InebriantCompo} />

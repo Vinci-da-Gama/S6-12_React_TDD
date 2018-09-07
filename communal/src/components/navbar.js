@@ -40,18 +40,12 @@ class AppNavBarCompo extends Component {
 						</NavItem>
 						<UncontrolledDropdown nav inNavbar>
 							<DropdownToggle nav caret>
-								Expense_Modification
+								Expense_CRUD
 							</DropdownToggle>
 							<DropdownMenu right>
 								<DropdownItem>
 									<NavLink to="/create" activeClassName="active" tag={RRNavLink}>
 										Create
-									</NavLink>
-								</DropdownItem>
-								<DropdownItem divider />
-								<DropdownItem>
-									<NavLink to="/edit" activeClassName="active" tag={RRNavLink}>
-										Edit
 									</NavLink>
 								</DropdownItem>
 								<DropdownItem divider />
