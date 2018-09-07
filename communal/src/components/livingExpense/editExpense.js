@@ -20,21 +20,21 @@ export class EditExpenseCompo extends Component {
     render() {
         return (
             <Row>
-                <Col xs="12" sm="6" md="4" className="offset-0 offset-sm-3 offset-md-4">
-                    <Card body inverse>
-                        <CardHeader tag="h2">
-                            Edit_Expense
-                        </CardHeader>
-                        <CardBody>
-                            <ExpenseForm expense={this.props.expense}
-                                onSubmit={(expense) => {this.onSubmit(expense)}} />
+                <Card body inverse>
+                    <CardHeader tag="h2" className="text-secondary">
+                        Edit_Expense
+                    </CardHeader>
+                    <CardBody>
+                        <ExpenseForm expense={this.props.expense}
+                            onSubmit={(expense) => {this.onSubmit(expense)}} />
+                        <Col xs="12" sm="6" md="4" className="offset-0 offset-sm-3 offset-md-4 my-3">
                             <Button color="danger" outline block className="rounded-0" onClick={() => {this.onRemove()}}>
                                 Remove_Expense
                             </Button>
-                        </CardBody>
-                        <CardFooter className="text-muted">Footer</CardFooter>
-                    </Card>
-                </Col>
+                        </Col>
+                    </CardBody>
+                    <CardFooter className="text-muted">Footer</CardFooter>
+                </Card>
             </Row>
         );
     }

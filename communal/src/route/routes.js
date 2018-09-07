@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomeDashboardCompo from '../containers/pages/expeDashboard';
 import AddExpense from '../components/livingExpense/AddExpense';
-import expeEdit from '../components/livingExpense/edit';
+import expeEdit from '../components/livingExpense/editExpense';
 import expeHelp from '../components/livingExpense/help';
 import InebriantCompo from '../containers/pages/inebriant';
 import HealthProductsCompo from '../containers/pages/health-products';

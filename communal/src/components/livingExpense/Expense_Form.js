@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import { Button, Alert } from 'reactstrap';
+import { Button, Alert, Label, Badge, Col } from 'reactstrap';
 
 class ExpenseForm extends Component {
     constructor(props) {
@@ -64,20 +64,50 @@ class ExpenseForm extends Component {
             <div>
                 { this.state.error && <Alert color="danger">{this.state.error}</Alert> }
                 <form noValidate name="expenseForm" onSubmit={ (event) => { this.onFormSubmit(event) } }>
-                    <input type="text" name="ef_description" placeholder="Description..." autoFocus
-                        value={this.state.description} onChange={ (event) => { this.onDescriptionChange(event) }} />
-                    <input type="text" name="ef_Amount" placeholder="Amount..."
-                        value={this.state.amount} onChange={ (event) => { this.onAmountChange(event) } } />
-                    <SingleDatePicker date={this.state.createdAt} focused={this.state.calendarFocused}
-                        onDateChange={ this.onDateChange } onFocusChange={ this.onFocusChange }
-                        numberOfMonths={1} isOutsideRange={ () => false } />
-                    <textarea name="ef_note" rows="5"
-                        placeholder="Add a note for your expense (optional)"
-                        value={this.state.note}
-                        onChange={ (event) => this.onNoteChange(event) }></textarea>
-                    <Button color="success" outline block>
-                        Add_Expense
-                    </Button>
+                    <Col sm={6} md={4} className="mx-auto">
+                        <Label className="bg-warning">
+                            Description: 
+                        </Label>
+                        <input type="text" name="ef_description" placeholder="Description..." autoFocus
+                            className="w-100 form-control rounded-0"
+                            value={this.state.description} onChange={ (event) => { this.onDescriptionChange(event) }} />
+                    </Col>
+                    <Col sm={6} md={4} className="mx-auto">
+                        <Label className="bg-warning">
+                            Amount: 
+                        </Label>
+                        <input type="text" name="ef_Amount" placeholder="Amount..."
+                            className="w-100 form-control rounded-0"
+                            value={this.state.amount} onChange={ (event) => { this.onAmountChange(event) } } />
+                    </Col>
+                    <Col sm={6} md={4} className="mx-auto">
+                        <Badge color="warning" pill>
+                            Create Date: 
+                        </Badge>
+                        <br />
+                        <SingleDatePicker
+                            date={ this.state.createdAt }
+                            focused={ this.state.calendarFocused }
+                            onDateChange={ (date) => { this.onDateChange(date) } }
+                            onFocusChange={ (focused) => this.onFocusChange(focused) }
+                            numberOfMonths={1} isOutsideRange={ () => false } />
+                    </Col>
+                    <Col sm={6} md={4} className="mx-auto">
+                        <Label className="bg-warning">
+                            Note:
+                        </Label>
+                        <br />
+                        <textarea name="ef_note" rows="5"
+                            placeholder="Add a note for your expense (optional)"
+                            className="w-100"
+                            value={this.state.note}
+                            onChange={ (event) => this.onNoteChange(event) }></textarea>
+                    </Col>
+                    <Col sm={6} md={4} className="mx-auto">
+                        <Button color="success" outline block>
+                            Add_Expense
+                        </Button>
+                    </Col>
                 </form>
             </div>
         );

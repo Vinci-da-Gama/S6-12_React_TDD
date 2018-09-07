@@ -12,9 +12,7 @@ export class AddExpense extends Component {
     render() {
         return (
             <div>
-                <h2>
-                    Add Expense
-                </h2>
+                <h2>Add Expense</h2>
                 <hr />
                 <ExpenseForm onSubmit={(expen={}) => { this.onSubmit(expen) }} />
             </div>
@@ -26,8 +24,7 @@ export class AddExpense extends Component {
 }); */
 
 const mapDispatchToProps = (dispatch) => ({
-    addExpense: (expense) => (dispatch.addExpense(expense))
+    addExpense: (expense) => dispatch(addExpense(expense))
 });
-
 
 export default connect(null, mapDispatchToProps)(AddExpense);

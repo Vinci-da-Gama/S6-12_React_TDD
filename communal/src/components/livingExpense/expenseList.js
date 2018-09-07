@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button, Alert } from 'reactstrap';
+import { Alert } from 'reactstrap';
 
 import selectExpenses from '../../helpers/data-handler/expense-filterNsort';
 import ExpenseListItem from './Expense_ListItem';
