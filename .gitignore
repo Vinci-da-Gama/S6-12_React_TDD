@@ -13,7 +13,5 @@ tmp.*
 postcss.config.js
 webpack.config.babel.js
 _asserts/
-communal/test/__mocks__/**/*.*
-communal/test/setupTests.js
-communal/test/
+./communal/test/
 jest.config.json
