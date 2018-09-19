@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test snapshot with default filters condition and filters has data. should render expense list filter correctly. 1`] = `
+<div
+  className="row mx-3"
+>
+  <Col
+    md={4}
+    sm={6}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="lf_textfilterId"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Text_Filter
+      </Label>
+      <Input
+        className="rounded-0"
+        id="lf_textfilterId"
+        name="lf_textfilter"
+        onChange={[Function]}
+        placeholder="Input Text For filtering..."
+        type="text"
+        value=""
+      />
+    </FormGroup>
+  </Col>
+  <Col
+    md={4}
+    sm={6}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="exampleSelectMulti"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Sorted_By
+      </Label>
+      <Input
+        className="rounded-0 select-rightcorner"
+        id="lf_sortbydateOramountId"
+        name="lf_sortbydateOramount"
+        onChange={[Function]}
+        type="select"
+        value="date"
+      >
+        <option
+          value="date"
+        >
+          Date
+        </option>
+        <option
+          value="amount"
+        >
+          Amount
+        </option>
+      </Input>
+    </FormGroup>
+  </Col>
+  <Col
+    md={4}
+    sm={6}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <Label
+      tag="label"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      StartDate -- EndDate
+    </Label>
+    <withStyles(DateRangePicker)
+      anchorDirection="left"
+      appendToBody={false}
+      block={false}
+      calendarInfoPosition="bottom"
+      customArrowIcon={null}
+      customCloseIcon={null}
+      customInputIcon={null}
+      daySize={39}
+      disableScroll={false}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      endDate={null}
+      endDateId="DpEndDate"
+      endDatePlaceholderText="End Date"
+      firstDayOfWeek={null}
+      focusedInput={null}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      initialVisibleMonth={null}
+      inputIconPosition="before"
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepFocusOnInput={false}
+      keepOpenOnDateSelect={false}
+      minimumNights={1}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      noBorder={false}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDatesChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      openDirection="down"
+      orientation="horizontal"
+      phrases={
+        Object {
+          "calendarLabel": "Calendar",
+          "chooseAvailableEndDate": [Function],
+          "chooseAvailableStartDate": [Function],
+          "clearDates": "Clear Dates",
+          "closeDatePicker": "Close",
+          "dateIsSelected": [Function],
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month.",
+          "jumpToPrevMonth": "Move backward to switch to the previous month.",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+          "moveFocusByOneMonth": "Switch months.",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+          "openThisPanel": "Open this panel.",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field.",
+          "selectFocusedDate": "Select the date in focus.",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      readOnly={false}
+      regular={false}
+      renderCalendarInfo={null}
+      renderDayContents={null}
+      renderMonthElement={null}
+      renderMonthText={null}
+      reopenPickerOnClearDates={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDates={true}
+      showDefaultInputIcon={false}
+      small={false}
+      startDate={null}
+      startDateId="DpStartDate"
+      startDatePlaceholderText="Start Date"
+      verticalHeight={null}
+      verticalSpacing={22}
+      weekDayFormat="dd"
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <FormText
+      color="secondary"
+      tag="small"
+    >
+      Select Date Range for expense.
+    </FormText>
+  </Col>
+</div>
+`;
+
+exports[`Test snapshot with default filters condition and filters has data. should render expense list filters with data correctly. 1`] = `
+<div
+  className="row mx-3"
+>
+  <Col
+    md={4}
+    sm={6}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="lf_textfilterId"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Text_Filter
+      </Label>
+      <Input
+        className="rounded-0"
+        id="lf_textfilterId"
+        name="lf_textfilter"
+        onChange={[Function]}
+        placeholder="Input Text For filtering..."
+        type="text"
+        value="bills"
+      />
+    </FormGroup>
+  </Col>
+  <Col
+    md={4}
+    sm={6}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="exampleSelectMulti"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Sorted_By
+      </Label>
+      <Input
+        className="rounded-0 select-rightcorner"
+        id="lf_sortbydateOramountId"
+        name="lf_sortbydateOramount"
+        onChange={[Function]}
+        type="select"
+        value="amount"
+      >
+        <option
+          value="date"
+        >
+          Date
+        </option>
+        <option
+          value="amount"
+        >
+          Amount
+        </option>
+      </Input>
+    </FormGroup>
+  </Col>
+  <Col
+    md={4}
+    sm={6}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <Label
+      tag="label"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      StartDate -- EndDate
+    </Label>
+    <withStyles(DateRangePicker)
+      anchorDirection="left"
+      appendToBody={false}
+      block={false}
+      calendarInfoPosition="bottom"
+      customArrowIcon={null}
+      customCloseIcon={null}
+      customInputIcon={null}
+      daySize={39}
+      disableScroll={false}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      endDate={"1970-01-04T00:00:00.000Z"}
+      endDateId="DpEndDate"
+      endDatePlaceholderText="End Date"
+      firstDayOfWeek={null}
+      focusedInput={null}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      initialVisibleMonth={null}
+      inputIconPosition="before"
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepFocusOnInput={false}
+      keepOpenOnDateSelect={false}
+      minimumNights={1}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      noBorder={false}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDatesChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      openDirection="down"
+      orientation="horizontal"
+      phrases={
+        Object {
+          "calendarLabel": "Calendar",
+          "chooseAvailableEndDate": [Function],
+          "chooseAvailableStartDate": [Function],
+          "clearDates": "Clear Dates",
+          "closeDatePicker": "Close",
+          "dateIsSelected": [Function],
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month.",
+          "jumpToPrevMonth": "Move backward to switch to the previous month.",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+          "moveFocusByOneMonth": "Switch months.",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+          "openThisPanel": "Open this panel.",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field.",
+          "selectFocusedDate": "Select the date in focus.",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      readOnly={false}
+      regular={false}
+      renderCalendarInfo={null}
+      renderDayContents={null}
+      renderMonthElement={null}
+      renderMonthText={null}
+      reopenPickerOnClearDates={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDates={true}
+      showDefaultInputIcon={false}
+      small={false}
+      startDate={"1970-01-01T00:00:00.000Z"}
+      startDateId="DpStartDate"
+      startDatePlaceholderText="Start Date"
+      verticalHeight={null}
+      verticalSpacing={22}
+      weekDayFormat="dd"
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <FormText
+      color="secondary"
+      tag="small"
+    >
+      Select Date Range for expense.
+    </FormText>
+  </Col>
+</div>
+`;

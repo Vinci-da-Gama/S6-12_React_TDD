@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expense list component with fixtureExpenses correctly. 1`] = `
+<div>
+  <ExpenseListItem
+    amount={195}
+    createdAt={0}
+    description="Gum"
+    id="1"
+    key="10"
+    note=""
+  />
+  <ExpenseListItem
+    amount={109500}
+    createdAt={-349200000}
+    description="Rent"
+    id="2"
+    key="21"
+    note="This is rent"
+  />
+  <ExpenseListItem
+    amount={4500}
+    createdAt={345600000}
+    description="Credit_Card"
+    id="3"
+    key="32"
+    note="Pay back credit"
+  />
+</div>
+`;
+
+exports[`should render expense list with empty list array correctly. 1`] = `
+<div>
+  <Alert
+    closeAriaLabel="Close"
+    color="danger"
+    fade={true}
+    isOpen={true}
+    tag="div"
+    transition={
+      Object {
+        "appear": true,
+        "baseClass": "fade",
+        "baseClassActive": "show",
+        "enter": true,
+        "exit": true,
+        "in": true,
+        "mountOnEnter": false,
+        "onEnter": [Function],
+        "onEntered": [Function],
+        "onEntering": [Function],
+        "onExit": [Function],
+        "onExited": [Function],
+        "onExiting": [Function],
+        "tag": "div",
+        "timeout": 150,
+        "unmountOnExit": true,
+      }
+    }
+  >
+    No expense item list.
+  </Alert>
+</div>
+`;

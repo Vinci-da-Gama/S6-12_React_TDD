@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render dashboard correctly. 1`] = `
+<div
+  className="container-fluid"
+>
+  <Connect(ExpensesSummary) />
+  <Connect(ExpenseListFilter) />
+  <Connect(ExpenseListCompo) />
+  <div
+    className="clearfix"
+  />
+  <div
+    className="row mx-3"
+  >
+    <p
+      className="col-12 col-sm-4 col-md-3"
+    >
+      haha-name
+    </p>
+    <p
+      className="col-12 col-sm-4 col-md-3"
+    >
+      Age: 
+      34
+    </p>
+    <div
+      className="col-12 col-sm-4 col-md-3"
+    >
+      Job is: 
+      Full-Stack_Developer
+    </div>
+  </div>
+</div>
+`;
