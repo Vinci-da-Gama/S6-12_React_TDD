@@ -2,16 +2,18 @@
   "name": "code-test-react",
   "version": "0.0.1",
   "description": "code-test-react",
-  "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "devserver": "webpack-dev-server --mode=development --hot --inline",
+    "devserver": "webpack-dev-server --mode=development --hot --inline --env.dist=false",
     "build:dev": "webpack --mode=development",
-    "build:prod": "webpack -p --mode=production",
+    "build:prod": "webpack --mode=production -display-error-details",
     "jssv": "json-server --watch sample-data.json --port 3004",
     "heroku-postbuild": "npm run build:prod",
     "st": "jest",
     "test": "jest --config=jest.config.json --watch"
+  },
+  "engines": {
+    "node": "8.12.0"
   },
   "keywords": [],
   "author": "Collin",
@@ -79,7 +81,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "uglifyjs-webpack-plugin": "^1.3.0",
-    "webpack": "^4.17.1",
+    "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-middleware": "^3.2.0",
     "webpack-dev-server": "^3.1.7",
