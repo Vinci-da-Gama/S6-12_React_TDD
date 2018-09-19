@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import numeral from 'numeral';
-import { Alert } from 'reactstrap';
 
 import selectExpenses from '../../helpers/data-handler/expense-filterNsort';
 import selectExpensesTotal from '../../helpers/data-handler/expense-total';
@@ -11,9 +10,9 @@ export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
     const formattedExpensesTotal = numeral(expensesTotal / 100).format('$0,0.00');
 
     return (
-        <Alert color="success">
+        <div className="bg-success">
             Viewing {expenseCount} {expenseWord} totalling {formattedExpensesTotal}
-        </Alert>
+        </div>
     );
 };
 

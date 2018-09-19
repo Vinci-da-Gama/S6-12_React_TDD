@@ -7,7 +7,7 @@ import {
 // if u need activeClassName attr, thus import NavLink as RRNavLink.
 import { NavLink as RRNavLink } from 'react-router-dom';
 
-import brandImg from '../../img/brand.png';
+// import brandImg from '../../img/brand.png';
 
 class AppNavBarCompo extends Component {
 	constructor(props) {
@@ -27,12 +27,12 @@ class AppNavBarCompo extends Component {
 		return (
 			<Navbar color="light" light expand="md">
 				<NavbarBrand to="/" activeClassName="active" tag={RRNavLink} exact>
-					<img src={brandImg} className="brand-navbar" alt="brand..." />
+					{/* <img src={brandImg} className="brand-navbar" alt="brand..." /> */}
 					Show_Case
 				</NavbarBrand>
 				<NavbarToggler onClick={() => this.toggle()} />
 				<Collapse isOpen={this.state.isOpen} navbar>
-					<Nav className="mr-auto" navbar>
+					<Nav className="mx-auto" navbar>
 						<NavItem>
 							<NavLink to="/" activeClassName="active" tag={RRNavLink} exact>
 								Expense_Dashboard

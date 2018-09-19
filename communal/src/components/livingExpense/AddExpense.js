@@ -14,7 +14,7 @@ export class AddExpense extends Component {
             <div>
                 <h2>Add Expense</h2>
                 <hr />
-                <ExpenseForm onSubmit={(expen={}) => { this.onSubmit(expen) }} />
+                <ExpenseForm onSubmit={(expen={}) => { this.onSubmit(expen) }} currentUrl={this.props.match.url} />
             </div>
         );
     }

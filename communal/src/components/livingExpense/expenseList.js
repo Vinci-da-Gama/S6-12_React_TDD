@@ -1,34 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Alert } from 'reactstrap';
 
 import selectExpenses from '../../helpers/data-handler/expense-filterNsort';
 import ExpenseListItem from './Expense_ListItem';
 
-export class ExpenseListCompo extends Component {
-    render() {
-        if (this.props.expenses.length === 0 || !this.props.expenses) {
-            return (
+export const ExpenseListCompo = (props) => (
+    <div>
+        {
+            (props.expenses.length === 0 || !props.expenses) ? (
                 <Alert color="danger">
                     No expense item list.
                 </Alert>
-            );
+            ) : (
+                props.expenses.map((expense, idx) => {
+                    return <ExpenseListItem key={ expense.id+idx } {...expense} />
+                })
+            )
         }
-        return (
-            <div>
-                {
-                    this.props.expenses.map((expense, idx) => {
-                        return <ExpenseListItem key={ expense.id+idx } {...expense} />
-                    })
-                }
-            </div>
-        );
-    }
-}
+    </div>
+)
 
-const mapStateToProps = (state) => ({
-    expenses: selectExpenses(state.expenses, state.setValViaFilters)
-});
+const mapStateToProps = (state) => {
+    return {
+        expenses: selectExpenses(state.expenses, state.setValViaFilters)
+    }
+};
 
 /* const mapDispatchToProps = { 
 } */

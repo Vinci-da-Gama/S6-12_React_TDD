@@ -4,7 +4,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 import { ListGroup, ListGroupItem, Badge, Label } from 'reactstrap';
 
-const ExpenseListItem = ({ id, description, amount, createdAt }) => {
+const ExpenseListItem = ({ id, description, amount, note, createdAt }) => {
     return (
         <div>
             <ListGroup>
@@ -17,6 +17,7 @@ const ExpenseListItem = ({ id, description, amount, createdAt }) => {
                         <Label>Amount: </Label>
                         {numeral(amount / 100).format('$0,0.00')}
                     </Badge>
+                    <i>&nbsp;&nbsp;&nbsp; Note: </i><span>{note}</span>
                 </ListGroupItem>
             </ListGroup>
         </div>

@@ -8,9 +8,9 @@ class ExpenseForm extends Component {
         super(props);
         this.state = {
             description: props.expense ? props.expense.description : '',
-            note: props.expense ? props.expense.note : '',
             amount: props.expense ? (props.expense.amount / 100).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+            note: props.expense ? props.expense.note : '',
             calendarFocused: false,
             error: ''
         };
@@ -86,6 +86,7 @@ class ExpenseForm extends Component {
                         </Badge>
                         <br />
                         <SingleDatePicker
+                            id="sd-pIcker"
                             date={ this.state.createdAt }
                             focused={ this.state.calendarFocused }
                             onDateChange={ (date) => { this.onDateChange(date) } }
@@ -105,7 +106,7 @@ class ExpenseForm extends Component {
                     </Col>
                     <Col sm={6} md={4} className="mx-auto">
                         <Button color="success" outline block>
-                            Add_Expense
+                            { this.props.currentUrl.includes('/edit/') ? 'Update_Expense' : 'Add_Expense' }
                         </Button>
                     </Col>
                 </form>

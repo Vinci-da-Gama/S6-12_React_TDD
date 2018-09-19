@@ -10,7 +10,7 @@ import HealthProductsCompo from '../containers/pages/health-products';
 import CosmeticHlDelegateCompo from '../containers/pages/cosmetic_highLevelCompoDelegate';
 import NestedDecisionCounter from '../containers/pages/nestedDecisionCounter';
 import NestedBooksByParamsCompo from '../containers/pages/nestedByParams';
-import NoFoundCompo from '../containers/pages/NoFound';
+import NoFoundCompo from '../components/NoFound';
 
 const RootRoute = () => (
 	<Switch>

@@ -26,7 +26,7 @@ export class EditExpenseCompo extends Component {
                     </CardHeader>
                     <CardBody>
                         <ExpenseForm expense={this.props.expense}
-                            onSubmit={(expense) => {this.onSubmit(expense)}} />
+                            onSubmit={(expense) => {this.onSubmit(expense)}} currentUrl={this.props.match.url} />
                         <Col xs="12" sm="6" md="4" className="offset-0 offset-sm-3 offset-md-4 my-3">
                             <Button color="danger" outline block className="rounded-0" onClick={() => {this.onRemove()}}>
                                 Remove_Expense
@@ -45,8 +45,8 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-    editExpense: (id, expense) => dispatch.editExpense(id, expense),
-    removeExpense: (targetIdObj) => dispatch.removeExpense(targetIdObj)
+    editExpense: (id, expense) => dispatch(editExpense(id, expense)),
+    removeExpense: (targetIdObj) => dispatch(removeExpense(targetIdObj))
 });
 
 

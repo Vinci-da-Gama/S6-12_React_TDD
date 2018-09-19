@@ -46,7 +46,7 @@ export class ExpenseListFilter extends Component {
                 </Col>
                 <Col sm={6} md={4}>
                     <FormGroup>
-                        <Label for="exampleSelectMulti">Changed_By</Label>
+                        <Label for="exampleSelectMulti">Sorted_By</Label>
                         <Input type="select" name="lf_sortbydateOramount" id="lf_sortbydateOramountId" className="rounded-0 select-rightcorner"
                             value={this.props.setValViaFilters.sortBy}
                             onChange={(event) => { this.onSortChange(event) }}>
@@ -59,7 +59,8 @@ export class ExpenseListFilter extends Component {
                     <Label>
                         StartDate -- EndDate
                     </Label>
-                    <DateRangePicker startDateId="DpStartDate" endDateId="DpEndDate"
+                    <DateRangePicker
+                        startDateId="DpStartDate" endDateId="DpEndDate"
                         startDate={this.props.setValViaFilters.startDate}
                         endDate={this.props.setValViaFilters.endDate}
                         onDatesChange={({ startDate, endDate }) => { this.onDatesChange({ startDate, endDate }) }}

@@ -6,14 +6,14 @@ import AppNavBarCompo from './navbar';
 import FooterCompo from './footer';
 
 const RootApp = () => (
-	<div>
-		<AppNavBarCompo />
-		<div className="container-fluid">
-			<PageTitleCompo pathName={window.location.pathname.replace(/\//g, '')} />
-			<RootRoute />
-		</div>
-		<FooterCompo />
-	</div>
+    <div>
+        <AppNavBarCompo />
+        <div className="container-fluid">
+            <PageTitleCompo pathName={window.location.pathname.replace(/\//g, '')} />
+            <RootRoute />
+        </div>
+        <FooterCompo />
+    </div>
 );
 
 export default RootApp;
