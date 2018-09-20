@@ -1,7 +1,7 @@
 {
-  "name": "code-test-react",
+  "name": "S6-12_React_TDD",
   "version": "0.0.1",
-  "description": "code-test-react",
+  "description": "S6-12_React_TDD",
   "scripts": {
       "devserver": "webpack-dev-server --mode=development --hot --inline -display-error-details",
       "build:dev": "webpack --mode=development -display-error-details",
@@ -15,7 +15,8 @@
   "engines": {
     "node": "8.12.0",
     "npm": ">=6.4.1",
-    "yarn": "1.9.4"
+    "yarn": ">=1.9.4",
+    "webpack": "4.16.5"
   },
   "keywords": [],
   "author": "Collin",
