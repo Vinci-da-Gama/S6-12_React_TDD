@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "code-test-react",
   "scripts": {
-    "start": "node server/server.js",
-    "devserver": "webpack-dev-server --mode=development --hot --inline --env.dist=false -display-error-details",
-    "build:dev": "webpack --mode=development -display-error-details",
-    "build:prod": "webpack --mode=production -display-error-details",
-    "jssv": "json-server --watch sample-data.json --port 3004",
-    "heroku-postbuild": "npm run build:prod",
-    "st": "jest",
-    "test": "jest --config=jest.config.json --watch"
+      "devserver": "webpack-dev-server --mode=development --hot --inline -display-error-details",
+      "build:dev": "webpack --mode=development -display-error-details",
+      "build:prod": "webpack --mode=production -display-error-details",
+      "jssv": "json-server --watch sample-data.json --port 3004",
+      "st": "jest",
+      "test": "jest --config=jest.config.json --watch",
+      "start": "node server/server.js",
+      "heroku-postbuild": "yarn run build:prod"
   },
   "engines": {
     "node": "8.12.0",
