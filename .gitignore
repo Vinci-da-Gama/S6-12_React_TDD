@@ -9,9 +9,6 @@ _asserts/dist/
 npm-debug.log
 *.txt
 tmp.*
-.babelrc
-postcss.config.js
-webpack.config.babel.js
 _asserts/
 ./communal/test/
 jest.config.json
