@@ -2,8 +2,8 @@ import nPath              from 'path';
 import wpk                from 'webpack';
 import WriteFilePlugin    from 'write-file-webpack-plugin';
 import UglifyJsPlugin     from 'uglifyjs-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-// import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+// import ExtractTextPlugin  from 'extract-text-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin  from 'html-webpack-plugin';
 import OptimizeCSSAssetsPlugin  from "optimize-css-assets-webpack-plugin";
@@ -19,17 +19,17 @@ const npmLifecycle = process.env.npm_lifecycle_event;
 console.log('19 -- npmLifecycle: ', npmLifecycle);
 const isProduction = npmLifecycle === 'build:prod';
 
-const extractSCSS = new ExtractTextPlugin({
+/*const extractSCSS = new ExtractTextPlugin({
     filename: '[name].css',
     allChunks: true
-});
+});*/
 
-/* const miniExtractSCSS = new MiniCssExtractPlugin({
+const miniExtractSCSS = new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
     filename: '[name].css',
     chunkFilename: isProduction ? '[id].css' : '[id].[hash:3].css',
-}); */
+}); 
 
 const pathsToClean = [
     `${distDir}/js/`,
@@ -74,7 +74,7 @@ const commonConfig = {
             },
             {   
                 test: /\.(sa|sc|c)ss$/,
-                use: ExtractTextPlugin.extract({
+                /*use: ExtractTextPlugin.extract({
                     // fallback: 'style-loader',
                     use: [
                         { loader: 'css-loader',
@@ -90,8 +90,8 @@ const commonConfig = {
                             }
                         }
                     ]
-                })
-                /* use: [
+                })*/
+                use: [
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
@@ -108,7 +108,7 @@ const commonConfig = {
                             sourceMap: true
                         }
                     }
-                ] */
+                ]
             },
             {
                 test: /\.(ttf|otf|eot|svg|woff|jpe?g$|gif|png|ico|xml|json)$/,
@@ -185,9 +185,18 @@ const commonConfig = {
         }),
         /*when you use webpack-dev-server and you also want to output bundle.js*/
         new WriteFilePlugin(),
-        extractSCSS
-        // miniExtractSCSS
+        // extractSCSS
+        miniExtractSCSS
     ],
+    // Some libraries import Node modules but don't use them in the browser.
+    // Tell Webpack to provide empty mocks for them so importing them works.
+    node: {
+        dgram: 'empty',
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        child_process: 'empty'
+    },
     devServer: {
         historyApiFallback: true,
         contentBase: nPath.resolve(__dirname, `${ast}`),

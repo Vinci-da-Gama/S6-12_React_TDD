@@ -5,10 +5,9 @@ yarn.lock
 
 .DS_Store
 .AppleDouble
-_asserts/dist/
+_asserts/
 npm-debug.log
 *.txt
 tmp.*
-_asserts/
 ./communal/test/
 jest.config.json

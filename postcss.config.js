@@ -10,10 +10,16 @@ module.exports = {
 		},
 		'postcss-preset-env': {
             // stage: 3,
-            browsers: ['last 2 versions', '> 5%'],
+            browsers: [
+                'last 4 versions',
+                '> 2%',
+                'Firefox ESR',
+                'not ie < 9'
+            ],
             autoprefixer: {
                 grid: true
-            }
+            },
+            flexbox: 'no-2009'
         }
 	}
 };
