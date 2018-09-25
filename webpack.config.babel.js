@@ -177,7 +177,10 @@ const commonConfig = {
             inject: false,
             minify: true
         }),
-        new wpk.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        // remove all moment.js local files
+        // new wpk.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        // keep some specific moment.js local files -- zh=China, us=United State, au=Australia
+        new wpk.ContextReplacementPlugin(/moment[/\\]locale$/, /zh|au/),
         new CleanWebpackPlugin(pathsToClean, cleanOptions),
         new wpk.HotModuleReplacementPlugin(),
         new wpk.optimize.OccurrenceOrderPlugin(),
