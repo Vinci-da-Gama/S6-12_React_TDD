@@ -177,6 +177,7 @@ const commonConfig = {
             inject: false,
             minify: true
         }),
+        new wpk.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new CleanWebpackPlugin(pathsToClean, cleanOptions),
         new wpk.HotModuleReplacementPlugin(),
         new wpk.optimize.OccurrenceOrderPlugin(),
