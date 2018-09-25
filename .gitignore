@@ -11,3 +11,7 @@ npm-debug.log
 tmp.*
 ./communal/test/
 jest.config.json
+
+.babelrc
+postcss.config.js
+webpack.config.babel.js
