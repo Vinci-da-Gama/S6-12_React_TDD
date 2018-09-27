@@ -13,7 +13,3 @@ tmp.*
 jest.config.json
 wpkConfig/
 .eslintrc.json
-
-.babelrc
-postcss.config.js
-webpack.config.babel.js
