@@ -14,20 +14,20 @@ export const ExpenseListCompo = (props) => (
                 </Alert>
             ) : (
                 props.expenses.map((expense, idx) => {
-                    return <ExpenseListItem key={ expense.id+idx } {...expense} />
+                    return <ExpenseListItem key={ expense.id + idx } {...expense} />;
                 })
             )
         }
     </div>
-)
+);
 
 const mapStateToProps = (state) => {
     return {
         expenses: selectExpenses(state.expenses, state.setValViaFilters)
-    }
+    };
 };
 
-/* const mapDispatchToProps = { 
+/* const mapDispatchToProps = {
 } */
 
 export default connect(mapStateToProps, null)(ExpenseListCompo);

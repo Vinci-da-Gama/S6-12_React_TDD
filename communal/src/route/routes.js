@@ -14,15 +14,21 @@ import NoFoundCompo from '../components/NoFound';
 
 const RootRoute = () => (
 	<Switch>
-		<Route path='/' component={HomeDashboardCompo} exact={true} />
-        <Route path="/create" component={AddExpense} />
-        <Route path="/edit/:id" component={expeEdit} />
-        <Route path="/help" component={expeHelp} />
-		<Route path='/inebriant' component={InebriantCompo} />
-		<Route path='/health' component={HealthProductsCompo} />
-		<Route path='/cosmetic_hlDegate' component={CosmeticHlDelegateCompo} />
-		<Route path='/nestedInDecisionNCounter' component={NestedDecisionCounter} />
-        <Route path="/nestedBooksByParams" component={NestedBooksByParamsCompo} />
+		<Route path="/" component={HomeDashboardCompo} exact={true} />
+		<Route path="/create" component={AddExpense} />
+		<Route path="/edit/:id" component={expeEdit} />
+		<Route path="/help" component={expeHelp} />
+		<Route path="/inebriant" component={InebriantCompo} />
+		<Route path="/health" component={HealthProductsCompo} />
+		<Route path="/cosmetic_hlDegate" component={CosmeticHlDelegateCompo} />
+		<Route
+			path="/nestedInDecisionNCounter"
+			component={NestedDecisionCounter}
+		/>
+		<Route
+			path="/nestedBooksByParams"
+			component={NestedBooksByParamsCompo}
+		/>
 		<Route component={NoFoundCompo} />
 	</Switch>
 );

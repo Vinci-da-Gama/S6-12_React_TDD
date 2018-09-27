@@ -96,7 +96,7 @@ export const setBooks = (books) => {
 };
 
 
-export const getBooks = () =>  {
+export const getBooks = () => {
     return (dispatch) => {
         return axios.get(`${rootUrl}/books`)
         .then((resp) => {

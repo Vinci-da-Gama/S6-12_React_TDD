@@ -9,10 +9,10 @@ import filtersReducer from './filter-reducer';
 const RootReducer = combineReducers({
 	inebriants: InebriantReducer,
 	missChildren: MisschildrenReducer,
-    propvalObj: PropvalReducer,
-    books: booksReducer,
-    expenses: ExpensesReducer,
-    setValViaFilters: filtersReducer
+	propvalObj: PropvalReducer,
+	books: booksReducer,
+	expenses: ExpensesReducer,
+	setValViaFilters: filtersReducer
 });
 
 export default RootReducer;

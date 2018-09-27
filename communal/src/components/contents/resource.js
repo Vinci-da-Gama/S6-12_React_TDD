@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ResourceCompo = ({book, match}) => {
+const ResourceCompo = ({ book, match }) => {
     const resource = book.resources.find((elem) => elem.id === match.params.resourceId);
 	return (
         <div className="card">

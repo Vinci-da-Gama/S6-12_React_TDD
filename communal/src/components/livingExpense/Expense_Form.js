@@ -58,38 +58,42 @@ class ExpenseForm extends Component {
             });
         }
     }
-    
-    render () {
+
+    render() {
         return (
             <div>
                 { this.state.error && <Alert color="danger">{this.state.error}</Alert> }
-                <form noValidate name="expenseForm" onSubmit={ (event) => { this.onFormSubmit(event) } }>
+                <form noValidate name="expenseForm"
+                    onSubmit={ (event) => { this.onFormSubmit(event); } }>
                     <Col sm={6} md={4} className="mx-auto">
                         <Label className="bg-warning">
-                            Description: 
+                            Description:&nbsp;
                         </Label>
-                        <input type="text" name="ef_description" placeholder="Description..." autoFocus
+                        <input type="text" name="ef_description"
+                            placeholder="Description..." autoFocus
                             className="w-100 form-control rounded-0"
-                            value={this.state.description} onChange={ (event) => { this.onDescriptionChange(event) }} />
+                            value={this.state.description}
+                            onChange={ (event) => { this.onDescriptionChange(event); }} />
                     </Col>
                     <Col sm={6} md={4} className="mx-auto">
                         <Label className="bg-warning">
-                            Amount: 
+                            Amount:&nbsp;
                         </Label>
                         <input type="text" name="ef_Amount" placeholder="Amount..."
                             className="w-100 form-control rounded-0"
-                            value={this.state.amount} onChange={ (event) => { this.onAmountChange(event) } } />
+                            value={this.state.amount}
+                            onChange={ (event) => { this.onAmountChange(event); } } />
                     </Col>
                     <Col sm={6} md={4} className="mx-auto">
                         <Badge color="warning" pill>
-                            Create Date: 
+                            Create Date:&nbsp;
                         </Badge>
                         <br />
                         <SingleDatePicker
                             id="sd-pIcker"
                             date={ this.state.createdAt }
                             focused={ this.state.calendarFocused }
-                            onDateChange={ (date) => { this.onDateChange(date) } }
+                            onDateChange={ (date) => { this.onDateChange(date); } }
                             onFocusChange={ (focused) => this.onFocusChange(focused) }
                             numberOfMonths={1} isOutsideRange={ () => false } />
                     </Col>
@@ -106,7 +110,8 @@ class ExpenseForm extends Component {
                     </Col>
                     <Col sm={6} md={4} className="mx-auto">
                         <Button color="success" outline block>
-                            { this.props.currentUrl.includes('/edit/') ? 'Update_Expense' : 'Add_Expense' }
+                            { this.props.currentUrl.includes('/edit/')
+                                ? 'Update_Expense' : 'Add_Expense' }
                         </Button>
                     </Col>
                 </form>

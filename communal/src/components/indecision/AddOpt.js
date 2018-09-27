@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 export default class AddOptions extends Component {
@@ -21,7 +21,8 @@ export default class AddOptions extends Component {
 
 	render() {
 		return (
-            <Form inline noValidate name="InDecision-todolist-form" onSubmit={(event) => {this.onFormSubmit(event);}}>
+            <Form inline noValidate name="InDecision-todolist-form"
+                onSubmit={(event) => { this.onFormSubmit(event); }}>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="New_tHing" className="mr-sm-2">New Thing:</Label>
                     <Input type="text" name="thingName" id="New_tHing" placeholder="sth todo" />

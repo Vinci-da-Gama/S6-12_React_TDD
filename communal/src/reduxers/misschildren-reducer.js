@@ -6,8 +6,9 @@ const INIT_MISSCHILDREN = {
 
 export default (state = INIT_MISSCHILDREN, action) => {
 	switch (action.type) {
-	case FETCH_MISS_CHILDREN:
-		return { ...state, missChildren: action.missChildren };
-	default: return state;
+		case FETCH_MISS_CHILDREN:
+			return { ...state, missChildren: action.missChildren };
+		default:
+			return state;
 	}
 };

@@ -9,7 +9,7 @@ const InfoForAdmin = (props) => (
     </div>
 );
 
-
+// const MsgViaDelegate = (MsgViaDelegate) => {
 const MsgViaDelegate = (MsgViaDelegate) => {
     return (props) => (
         <div>
@@ -17,6 +17,6 @@ const MsgViaDelegate = (MsgViaDelegate) => {
             <MsgViaDelegate {...props} />
         </div>
     );
-}
+};
 
 export const AdminApplyDelegate = MsgViaDelegate(InfoForAdmin);

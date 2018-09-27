@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardTitle, CardSubtitle} from 'reactstrap';
+import { CardTitle, CardSubtitle } from 'reactstrap';
 
 const InDecisionHeader = (props) => {
 	return (

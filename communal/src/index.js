@@ -10,10 +10,10 @@ import RootApp from './components/index';
 require('../style/index.scss');
 
 export const rootTmpl = (
-    <Provider store={ storeWithMiddleware }>
-        <Router>
-            <RootApp />
-        </Router>
+	<Provider store={storeWithMiddleware}>
+		<Router>
+			<RootApp />
+		</Router>
 	</Provider>
 );
 const Utensil = document.querySelector('.root-dom-container');

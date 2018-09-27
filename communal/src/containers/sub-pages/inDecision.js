@@ -12,7 +12,7 @@ class InDecisionCompo extends Component {
         super(props);
         this.state = {
             options: [],
-            selectedOpt: undefined
+            selectedOpt: null
         };
     }
 
@@ -21,7 +21,6 @@ class InDecisionCompo extends Component {
         try {
             const json = sessionStorage.getItem('options');
             const options = JSON.parse(json);
-        
             if (options) {
                 this.setState(() => ({ options }));
             }
@@ -29,6 +28,7 @@ class InDecisionCompo extends Component {
         // Do nothing at all
         }
     }
+
     componentDidUpdate(prevProps, prevState) {
         // update options.
         if (prevState.options.length !== this.state.options.length) {
@@ -36,6 +36,7 @@ class InDecisionCompo extends Component {
             sessionStorage.setItem('options', json);
         }
     }
+
     componentWillUnmount() {
         console.log('componentWillUnmount');
     }
@@ -48,10 +49,10 @@ class InDecisionCompo extends Component {
 
     handleClearSelectedOption() {
         this.setState(() => ({
-            selectedOpt: undefined
+            selectedOpt: null
         }));
     }
-    
+
     rmCurentOption(optionToRemove) {
         this.setState((prevState) => ({
             options: prevState.options.filter((option) => optionToRemove !== option)
@@ -59,7 +60,7 @@ class InDecisionCompo extends Component {
     }
 
     onRemoveAll() {
-        this.setState(() => ( {options:[]} ));
+        this.setState(() => ({ options: [] }));
         this.render();
     }
 
@@ -68,13 +69,15 @@ class InDecisionCompo extends Component {
             return 'Please input option.';
         } else if (this.state.options.indexOf(opt) > -1) {
             return 'This option is already existed.';
+        } else {
+            return null;
         }
         this.setState((preState) => ({
             options: [...preState.options, opt]
         }));
     }
 
-    render () {
+    render() {
         const subTitle = 'Collect life todo list here.';
 
         return (
@@ -86,18 +89,22 @@ class InDecisionCompo extends Component {
                         </CardHeader>
                         <CardBody>
                             <InDecisionHeader subtitle={subTitle} />
-                            <RandomPickupDecision optLen={this.state.options.length} rPickupDecision={() => this.randomPickupDecision()} />
+                            <RandomPickupDecision optLen={this.state.options.length}
+                                rPickupDecision={() => this.randomPickupDecision()} />
                             <ShowOptions opts={this.state.options}
-                                removeAll={() => {this.onRemoveAll()}} rmCurrOpt={(optStr) => this.rmCurentOption(optStr)} />
-                            <AddOpt handleAddOption={(optText) => {this.handleAddOption(optText)}} />
+                                removeAll={() => { this.onRemoveAll(); }}
+                                rmCurrOpt={(optStr) => this.rmCurentOption(optStr)} />
+                            <AddOpt
+                                handleAddOption={(optText) => { this.handleAddOption(optText); }}
+                            />
                         </CardBody>
                         <CardFooter>InDecision Footer</CardFooter>
                     </Card>
                     <OptModal selectedOpt={this.state.selectedOpt}
-                        handleClearSelectedOpt={() => { this.handleClearSelectedOption() }} />
+                        handleClearSelectedOpt={() => { this.handleClearSelectedOption(); }} />
                 </div>
             </div>
-        )
+        );
     }
 }
 

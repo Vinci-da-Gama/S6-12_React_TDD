@@ -6,7 +6,10 @@ class CosmeticCompo extends Component {
 	render() {
 		return (
 			<div>
-                <AdminApplyDelegate isAdmin={true} info="when you see it, you are a real administrator." />
+                <AdminApplyDelegate
+                    isAdmin={true}
+                    info="when you see it, you are a real administrator."
+                    />
                 <hr />
 				<div className="container">
 					<div className="row">

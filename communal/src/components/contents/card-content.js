@@ -12,8 +12,11 @@ class CardContent extends Component {
 
 	render() {
 		return (
-			<div className={`card rounded-0 mb-4 border-dark ${this.state.isActivated ? 'activated' : ''}`}
-				onClick={() => { this.setState((prevState) => ({ isActivated: !prevState.isActivated })); }}>
+			<div className={`card rounded-0 mb-4 border-dark ${this.state.isActivated
+                ? 'activated' : ''}`}
+				onClick={() => {
+                    this.setState((prevState) => ({ isActivated: !prevState.isActivated }));
+                    }}>
 				<img className="card-img-top rounded-0" src={this.props.item.thumb}
 					alt={this.props.item.thumb + this.props.item.id} />
 				<div className="card-body">

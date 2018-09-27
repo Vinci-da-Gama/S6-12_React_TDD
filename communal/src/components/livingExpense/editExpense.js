@@ -13,7 +13,7 @@ export class EditExpenseCompo extends Component {
     }
 
     onRemove() {
-        this.props.removeExpense({id: this.props.expense.id});
+        this.props.removeExpense({ id: this.props.expense.id });
         this.props.history.push('/');
     }
 
@@ -26,9 +26,12 @@ export class EditExpenseCompo extends Component {
                     </CardHeader>
                     <CardBody>
                         <ExpenseForm expense={this.props.expense}
-                            onSubmit={(expense) => {this.onSubmit(expense)}} currentUrl={this.props.match.url} />
-                        <Col xs="12" sm="6" md="4" className="offset-0 offset-sm-3 offset-md-4 my-3">
-                            <Button color="danger" outline block className="rounded-0" onClick={() => {this.onRemove()}}>
+                            onSubmit={(expense) => { this.onSubmit(expense); }}
+                            currentUrl={this.props.match.url} />
+                        <Col xs="12" sm="6" md="4"
+                            className="offset-0 offset-sm-3 offset-md-4 my-3">
+                            <Button color="danger" outline block
+                                className="rounded-0" onClick={() => { this.onRemove(); }}>
                                 Remove_Expense
                             </Button>
                         </Col>

@@ -21,7 +21,7 @@ class CounterCompo extends Component {
             case '-':
                 this.setState((preState) => {
                     if (preState.counter === 0) {
-                        return;
+                        return null;
                     } else {
                         return {
                             counter: preState.counter - 1
@@ -41,9 +41,8 @@ class CounterCompo extends Component {
             };
         });
     };
-    
-    
-    render () {
+
+    render() {
         return (
             <div className="row mx-3">
                 <div className="col-12 col-sm-12 col-md-6 offset-md-3">
@@ -56,13 +55,16 @@ class CounterCompo extends Component {
                             Current Counter: {this.state.counter}
                         </CardTitle>
                         {/* <CardText></CardText> */}
-                        <Button outline color="info" onClick={() => this.handleCounterOperation('+') }>
+                        <Button outline color="info"
+                            onClick={() => this.handleCounterOperation('+') }>
                             +1
                         </Button>
-                        <Button outline color="info" onClick={() => this.handleCounterOperation('-') }>
+                        <Button outline color="info"
+                            onClick={() => this.handleCounterOperation('-') }>
                             -1
                         </Button>
-                        <Button color="warning" size="lg" block className="rounded-0 mt-2" onClick={() => this.resetCounter()}>
+                        <Button color="warning" size="lg" block
+                            className="rounded-0 mt-2" onClick={() => this.resetCounter()}>
                             Reset
                         </Button>
                         </CardBody>
@@ -70,7 +72,7 @@ class CounterCompo extends Component {
                     </Card>
                 </div>
             </div>
-        )
+        );
     }
 }
 

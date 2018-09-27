@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import LiCompo from './li';
 
 class UlCompo extends Component {
-    render () {
+    render() {
         return (
             <ul className="nav nav-pills justify-content-center">
                 {

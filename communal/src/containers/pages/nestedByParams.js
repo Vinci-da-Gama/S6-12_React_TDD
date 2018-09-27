@@ -12,7 +12,7 @@ class NestedBooksViaIdCompo extends Component {
         this.props.getBooks();
     }
 
-    render () {
+    render() {
         if (this.props.books.length === 0 || !this.props.books) {
             return (
                 <div>
@@ -26,7 +26,8 @@ class NestedBooksViaIdCompo extends Component {
                     <UlCompo collection={ this.props.books } match={ this.props.match } />
                 </div>
                 <div className="col-12">
-                    <Route path={ `${this.props.match.path}/:bookId` } render={(props) => ( <SigCompo {...props} books={this.props.books} /> )} />
+                    <Route path={ `${this.props.match.path}/:bookId` }
+                        render={(props) => (<SigCompo {...props} books={this.props.books} />)} />
                 </div>
             </div>
         );
