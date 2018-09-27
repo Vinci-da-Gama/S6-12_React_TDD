@@ -11,6 +11,9 @@ import OptimizeCSSAssetsPlugin  from "optimize-css-assets-webpack-plugin";
 // import FavcWpkPlugin      from 'favicons-webpack-plugin';
 import wpkMerge           from 'webpack-merge';
 
+// to avoid heroku deployment require this.
+import eslintChecking from './wpkConfig/config_eslint';
+
 const ast = './_asserts', distDir = `${ast}/dist`, 
     communal = './communal', devSrc = `${communal}/src/`;
 const entryIdx = `${devSrc}index.js`;
@@ -225,8 +228,6 @@ const commonConfig = {
 }; */
 
 let wpkConfig;
-// to avoid heroku deployment require this.
-import eslintChecking from './wpkConfig/config_eslint';
 
 // Detect how npm is run and branch based on that
 switch (npmLifecycle) {
@@ -239,7 +240,7 @@ switch (npmLifecycle) {
         wpkConfig = wpkMerge(commonConfig, eslintChecking.eslintLoader());
         break;
     default:
-        console.log('242 -- default wpk configutation...');
+        console.log('242 -- default or product wpk configutation...');
         wpkConfig = wpkMerge(commonConfig, {});
         break;
 }

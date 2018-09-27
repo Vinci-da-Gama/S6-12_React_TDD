@@ -11,5 +11,4 @@ npm-debug.log
 tmp.*
 ./communal/test/
 jest.config.json
-wpkConfig/
 .eslintrc.json
