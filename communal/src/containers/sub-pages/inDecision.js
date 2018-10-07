@@ -65,16 +65,17 @@ class InDecisionCompo extends Component {
     }
 
     handleAddOption(opt) {
+        console.log('68 -- ', opt);
         if (!opt) {
             return 'Please input option.';
         } else if (this.state.options.indexOf(opt) > -1) {
             return 'This option is already existed.';
         } else {
+            this.setState((preState) => ({
+                options: [...preState.options, opt]
+            }));
             return null;
         }
-        this.setState((preState) => ({
-            options: [...preState.options, opt]
-        }));
     }
 
     render() {

@@ -17,6 +17,7 @@ export default class AddOptions extends Component {
         if (!error) {
             e.target.elements.thingName.value = '';
         }
+        console.log('20 -- ', e);
     }
 
 	render() {
